@@ -1,5 +1,11 @@
+#Introduction#
 This repository consists of a series of practice exercises for Map Reduce. 
 They are done using python taking advantage of hadoop streaming. 
+
+### Setup ##
+
+Centos OS with Cloudera Hadoop distribution. The VM can be obtained from: http://content.udacity-data.com/courses/ud617/Cloudera-Udacity-Training-VM-4.1.1.c.zip
+
 
 The following command alias is added to the bashrc file: 
 - open bashrc: gedit ~/.bashrc
@@ -20,19 +26,19 @@ tail -1000 ../data/purchases.txt > testdata
 ./mapper.py < testdata > inp_red
 tail inp_red 
 
-# Run Map Reduce Job: #
+### Run Map Reduce Job: ###
 hadoop fs -put ../data/purchases.txt input
 hadoop fs -ls /data
 hs mapper.py reducer.py /data/input /data/out1
 
-# View Output #
+### View Output ###
 hadoop fs -tail /data/out1/part-00000 (view output)
 
 
 ____________________________________________________________________________________________________
 
-Assignment 1: mapper-reducer for finding total sales per item category
-Assignment 2: Find the monetory value for the highest individual sale for each separate store
+- Assignment 1: mapper-reducer for finding total sales per item category
+- Assignment 2: Find the monetary value for the highest individual sale for each separate store
 
-Assignment 3: Total Number of sales and sum of sales for each store
-Ans: 4138476	1034457953.26
+- Assignment 3: Total Number of sales and sum of sales for each store
+	Ans: 4138476	1034457953.26
