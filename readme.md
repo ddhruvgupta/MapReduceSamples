@@ -11,12 +11,11 @@ The following command alias is added to the bashrc file:
 - open bashrc: `gedit ~/.bashrc`
 
 - create alias:
-	`run_mapreduce() {
-		hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -mapper $1 -reducer $2 -file $1 -file $2 -input $3 -output $4
-	}
-
+	```bash
+	run_mapreduce() { hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -mapper $1 -reducer $2 -file $1 -file $2 -input $3 -output $4}
 	alias hs=run_mapreduce`
-
+	```
+	
 ## Testing ##
 - create test data 
 `tail -100  ./data/purchases.txt > test`
