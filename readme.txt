@@ -20,16 +20,19 @@ tail -1000 ../data/purchases.txt > testdata
 ./mapper.py < testdata > inp_red
 tail inp_red 
 
-Run Map Reduce Job: 
+# Run Map Reduce Job: #
 hadoop fs -put ../data/purchases.txt input
 hadoop fs -ls /data
 hs mapper.py reducer.py /data/input /data/out1
+
+# View Output #
 hadoop fs -tail /data/out1/part-00000 (view output)
 
 
-__________________________________________________
+____________________________________________________________________________________________________
 
 Assignment 1: mapper-reducer for finding total sales per item category
 Assignment 2: Find the monetory value for the highest individual sale for each separate store
 
 Assignment 3: Total Number of sales and sum of sales for each store
+Ans: 4138476	1034457953.26
