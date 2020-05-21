@@ -1,4 +1,4 @@
-#Introduction#
+### Introduction ###
 This repository consists of a series of practice exercises for Map Reduce. 
 They are done using python taking advantage of hadoop streaming. 
 
@@ -8,7 +8,7 @@ Centos OS with Cloudera Hadoop distribution. The VM can be obtained from: http:/
 
 
 The following command alias is added to the bashrc file: 
-- open bashrc: gedit ~/.bashrc
+- open bashrc: `gedit ~/.bashrc`
 
 - create alis:
 	run_mapreduce() {
@@ -17,7 +17,7 @@ The following command alias is added to the bashrc file:
 
 	alias hs=run_mapreduce
 
-Testing:
+## Testing ##
 - create test data 
 tail -100  ./data/purchases.txt > test
  
